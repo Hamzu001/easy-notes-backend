@@ -22,5 +22,5 @@ app.use(express.static("./public"));
 app.use(fallback("index.html", { root: __dirname + "/public" }));
 
 app.listen(port, () => {
-  console.log(`Example app listening on port http://localhost:${port}`);
+  console.log(`Example app listening on port ${port}`);
 });
