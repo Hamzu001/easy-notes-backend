@@ -19,7 +19,7 @@ const UserSchema = new Schema({
         type: Date,
         default: Date.now
     }
-},{collection: 'hamza'});
+},{collection: 'users'});
 
 const User = mongoose.model('user', UserSchema);
 module.exports = User;
