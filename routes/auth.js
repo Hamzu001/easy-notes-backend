@@ -20,7 +20,7 @@ router.post('/createuser', [
   if (!errors.isEmpty()) {
     return res.status(400).json({success, errors: errors.array() });
   }
-  try {
+  // try {
     // Check whether the user with this email exists already
     let user = await User.findOne({ email: req.body.email });
     if (user) {
@@ -47,10 +47,10 @@ router.post('/createuser', [
     success = true;
     res.json({success, authtoken })
 
-  } catch (error) {
-    console.error(error.message);
-    res.status(500).send("Internal Server Error");
-  }
+  // } catch (error) {
+  //   console.error(error.message);
+  //   res.status(500).send("Internal Server Error");
+  // }
 })
 
 
